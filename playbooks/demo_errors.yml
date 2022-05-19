@@ -1,0 +1,14 @@
+---
+- hosts: "{{ hosts }}"
+  tasks:
+    - name: conecta a apache?
+      block:
+        - win_uri:
+            url: http://{{ hosts }}
+      rescue:
+        - debug:
+            msg: "Debes levantar apache"
+      always:
+        - debug:
+            msg: "Siempre ejecuto esto"
+
