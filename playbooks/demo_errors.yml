@@ -7,7 +7,7 @@
             url: http://{{ hosts }}
       rescue:
         - debug:
-            msg: "Debes levantar apache"
+            msg: "Debes levantar el apache"
       always:
         - debug:
             msg: "Siempre ejecuto esto"
